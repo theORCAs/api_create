@@ -4,9 +4,12 @@ Jimbo’s Illegal Deli (JID) is an online marketplace that brings together suppl
 
 Jimbo uses a pretty outdated and manual system. He heard about APIs and wants to build his own APIs that will allow him to `GET/POST/PUT/DELETE/PATCH` objects in both the inventory and the customer json files. You have been hired to help him with this. 
 
-Set-up: Clone the github repo: https://github.com/patrickreich/api_create onto your computer. In it, you’ll find the 2 json files, and an `index.js` file. For now, we are imagining that the json files are databases stored on a server somewhere (rather than text files on your computer that you update). `Index.js` is the main script which you will run, but you can make as many separate files as you like in the folder to help you. The chosen listening port is `8080`. You will need node installed on your computer and the `express` package in node. You can use whatever extra packages you need. 
-
-You can check everything is running smoothly if you run the `node index` command in your terminal, which will run the application. Then type in `localhost:8080` in your browser, you should see `“Hello World”` pop up. For non-GET request testing, you can use any REST client like Insomnia, Postman, etc.
+Set-up: 
+  * Clone the github repo: https://github.com/patrickreich/api_create onto your computer and make your own branch. 
+  * In it, you’ll find the 2 json files, and an `index.js` file. For now, we are imagining that the json files are databases stored on a server somewhere (rather than text files on your computer that you update). `Index.js` is the main script which you will run, but you can make as many separate files as you like in the folder to help you. 
+  * The chosen listening port is `8080`. 
+  * You will need node installed on your computer and the `express` package in node. You can use whatever extra packages you need. 
+  * You can check that everything is running smoothly by running the `node index` command in your terminal, which will run the application. Then type in `localhost:8080` in your browser, you should see `“Hello World”` pop up. For non-GET request testing, you can use any REST client like Insomnia, Postman, etc.
 
 Now, what does Jimbo’s Deli need from you?
 
