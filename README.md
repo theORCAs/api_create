@@ -12,14 +12,18 @@ Now, what does Jimbo’s Deli need from you?
 
 1.	Create an API endpoint that will allow you to retrieve the `first_name`, `last_name` and `email` of each customer from the database.
 2.	As you can see, the `last_transactions` are not ordered for the customers, please make an endpoint that retrieves, orders and then writes these transactions in the right order to the database. 
-3.	Create an endpoint that can add orders (update both databases).
-
+3.	Create an endpoint that can process orders (update both databases).
 
 Instructions: There have been 2 new orders, please update all respective fields in both databases:
 
-··* a.	Customer with `id = 4` (probably a Colombian chef) has gone and made a purchase of `12 dolphins` and `4 truffles`
-··* b.	Customer with `id = 1` (probably Dan Bilzerian’s long-lost cousin) has bought `1 helicopter`, `5 AK47s`, `3 cocaines`  
-4.	Due to COVID-19, all suppliers that were dealing in `Yuan Renminbi` have decided to switch to `Euro`. No one actually knows why, they just sorta decided to. But anyway, write a script that will retrieve the right objects, update and write them back to the database.
-5.	Lastly, for this year, we are adding a new item to our menu, it’s `hand_sanitizer`. It’ll be supplied by the same exact supplier as `toilet_paper`. We’ll order `500`, with a `10.00` price tag. Color will be `green`, hex: `#302`.
+  * Customer with `id = 4` (probably a Colombian chef) has gone and made a purchase of `12 dolphins` and `4 truffles`
+  * Customer with `id = 1` (probably Dan Bilzerian’s long-lost cousin) has bought `1 helicopter`, `5 AK47s`, `3 cocaines`  
+  
+4.	Create an endpoint that can update the currencies of suppliers
+  * Due to COVID-19, all suppliers that were dealing in `Yuan Renminbi` have decided to switch to `Euro`. No one actually knows why, they just sorta decided to. But anyway, write a script that will retrieve the right objects, update and write them back to the database.
+  
+5.	Lastly, create an enpoint that can add items to the inventory.
+
+  * For this year, we are adding a new item to our menu, it’s `hand_sanitizer`. It’ll be supplied by the same exact supplier as `toilet_paper`. We’ll order `500`, with a `10.00` price tag. Color will be `green`, hex: `#302`.
 
 Thank you very much for your help. You have 1 week to complete the task. 
