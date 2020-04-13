@@ -25,7 +25,7 @@ Instructions: There have been 2 new orders, please update all respective fields 
 4.	Create an endpoint that can update the currencies of suppliers
   * Due to COVID-19, all suppliers that were dealing in `Yuan Renminbi` have decided to switch to `Euro`. No one actually knows why, they just sorta decided to. But anyway, write a script that will retrieve the right objects, update and write them back to the database.
   
-5.	Lastly, create an enpoint that can add items to the inventory.
+5.	Lastly, create an endpoint that can add items to the inventory.
 
   * For this year, we are adding a new item to our menu, it’s `hand_sanitizer`. It’ll be supplied by the same exact supplier as `toilet_paper`. We’ll order `500`, with a `10.00` price tag. Color will be `green`, hex: `#302`.
 
