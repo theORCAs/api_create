@@ -23,15 +23,13 @@ Now, what does Jimbo’s Deli need from you?
 Jimbo also wants his customers to benefit from this upgrade.
 
 1.	Create an endpoint that can process customer orders (make the relevant database updates).
-2. 
+2. Jimbo wants to make sure that only his registered customers can use the app. Everytime they do, he wants to store these "events" inside a new database that also shows who made the request and when it was made. He doesn't care about how it's done, as long as it's done.
 
 Jimbo has had major trust issued ever since his mum lied to him, claiming that his goldfish turned invisble even though she accidently killed it. Therefore, he asks you to run a few tests to prove that your app works, he will then check the databases to see if stuff changed acordingly.
 
   * Customer with `id = 4` (probably a Colombian chef) has gone and made a purchase of `12 dolphins` and `4 truffles`
   
   * Customer with `id = 1` (probably Dan Bilzerian’s long-lost cousin) has bought `1 helicopter`, `5 AK47s`, `3 cocaines`  
-  
-  * Due to COVID-19, all suppliers that were dealing in `Yuan Renminbi` (CNY) have decided to switch to `Euro` (EUR). No one actually knows why, they just sorta decided to. But anyway, write a script that will retrieve the right objects, update and write them back to the database.
   
   * For this year, we are adding a new item to our menu, it’s `hand_sanitizer`. It’ll be supplied by the same exact supplier as `toilet_paper`. We’ll order `500`, with a `10.00` price tag. Color will be `green`, hex: `#302`.
 
