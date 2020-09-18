@@ -15,7 +15,7 @@ Now, what does Jimbo’s Deli need from you?
 
 1.	Create an endpoint that will allow you to retrieve the `first_name`, `last_name` and `email` of each customer from the database.
 2.	As you can see, Jimbo's assistant, Mahmood, did a pretty bad job putting everything online so the `last_transactions` are not ordered for the customers. Please write a script that orders these. Jimbo's also asking if you could make sure that this script runs every wednesday at 1am (if the app is running of course). 
-3. In this kind of business you often get "troublesome" customers. Sometimes Jimbo needs to pay them a little visit to remind them that he is un-f*ck-able-with. Please write an endpoint that will calculate the distance between a given place and a customer to help Jimbo determine if it's worth it to visit them.
+3. In this kind of business you often get "troublesome" customers. Sometimes Jimbo needs to pay them a little visit to remind them that he is un-f*ck-with-able. Please write an endpoint that will calculate the distance between a given place and a customer to help Jimbo determine if it's worth it to visit them.
 4.	Create an endpoint that can update the currencies of suppliers with real time conversion rates.
 5.	Lastly, create an endpoint that can add items to the inventory.
 6. Jimbo's rival, Bojim, knows a thing or two about computers so Jimbo's afraid that he might use his app to mess up his inventory. He you to make sure that all the endpoints he mentioned until now can only be accessed if you enter the phrase "Money4MeNot4u" somewhere while making the request.
