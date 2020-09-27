@@ -1,0 +1,54 @@
+//1 
+GET http://localhost:8080/getCustomers
+//2
+###
+GET http://localhost:8080/autoReorderTransactions
+
+//4
+###
+POST http://localhost:8080/updateCurrencyAndPrices
+content-type: application/json
+
+{
+    "invUpdateList":[
+        {
+        "item":"oyster",
+        "price":"800",
+        "currency":"Dolar"
+        },
+        {
+        "item":"oyster123",
+        "price":"633",
+        "currency":"Yen"
+        }
+    ]
+}
+
+//5
+###
+POST http://localhost:8080/addInventory
+content-type: application/json
+
+{
+      "item":"test tt_001",
+      "details":{
+         "price":"5453.37",
+         "amount":57,
+         "last_purchased":"08/22/2016",
+         "color":"Maroon",
+         "color_hex":"#12c"
+      },
+      "supplier_details":{
+         "country":"Grenada",
+         "country_code":"GD",
+         "currency":"Dollar",
+         "contact":{
+            "phone":"864-800-0466",
+            "email":"mbrunton0@chronoengine.com"
+         }
+      }
+   }
+
+
+
+
