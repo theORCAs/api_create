@@ -1,34 +1,39 @@
 const fs = require('fs');
 const cron = require("node-cron");
+const { customerFileName, apiToken } = require('../settings.js');
 
 module.exports = {
     autoReorderTransactions: (req, res) => {
-        // Send message for default URL
-        let rawdata = fs.readFileSync('deli_customers.json');
-        let customers = JSON.parse(rawdata);
+        if (req.headers.authorization === apiToken) {
+            // Send message for default URL
+            let rawdata = fs.readFileSync(customerFileName);
+            let customers = JSON.parse(rawdata);
 
-        function reorderTransactions(a, b) {
-            const pkA = Date.parse(a.date);
-            const pkB = Date.parse(b.date);
+            function reorderTransactions(a, b) {
+                const pkA = Date.parse(a.date);
+                const pkB = Date.parse(b.date);
 
-            let comparison = 0;
+                let comparison = 0;
 
-            if (pkA > pkB) {
-                comparison = 1;
-            } else if (pkA < pkB) {
-                comparison = -1;
+                if (pkA > pkB) {
+                    comparison = 1;
+                } else if (pkA < pkB) {
+                    comparison = -1;
+                }
+                return comparison;
             }
-            return comparison;
-        }
 
-        for (i = 0; i < customers.length; i++) {
-            let sortedTransactions = customers[i].last_transactions.sort(reorderTransactions);
-            customers[i].last_transactions = sortedTransactions;
+            customers.forEach(e =>
+                e.last_transactions = e.last_transactions.sort(reorderTransactions)
+            );
+
+            fs.writeFile(customerFileName, JSON.stringify(customers), function (err) {
+                err && console.log(err);
+                console.log('Writing is completed!');
+            });
+            res.send("1");
+        } else {
+            res.send('we have a problem. Token is incorrect! Connect the administrator. Please');
         }
-        fs.writeFile('./deli_customers.json', JSON.stringify(customers), function (err) {
-            if (err) return console.log(err);
-            console.log('Writing is completed!');
-        });
-        // res.send(customers)
     }
 }

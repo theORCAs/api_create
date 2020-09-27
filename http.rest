@@ -1,20 +1,44 @@
 //1 
 GET http://localhost:8080/getCustomers
+content-type: application/json
+Authorization: TW9uZXk0TWVOb3Q0dQ==
+//Money4MeNot4u to base64 ==>TW9uZXk0TWVOb3Q0dQ== we convert our code to make more safety integration
+
 //2
 ###
 GET http://localhost:8080/autoReorderTransactions
+content-type: application/json
+Authorization: TW9uZXk0TWVOb3Q0dQ==
+
+//3
+###
+GET http://localhost:8080/getMyDistanceWithCustomer
+content-type: application/json
+Authorization: TW9uZXk0TWVOb3Q0dQ==
+
+{
+    "customer":{
+        "first_name": "Dall",
+        "last_name": "Aingell"
+        },
+        "myLocation":{
+            "latitude":"51.4991593",
+            "longitude":"-0.1781887"
+        }
+}
 
 //4
 ###
 POST http://localhost:8080/updateCurrencyAndPrices
 content-type: application/json
+Authorization: TW9uZXk0TWVOb3Q0dQ==
 
 {
     "invUpdateList":[
         {
         "item":"oyster",
-        "price":"800",
-        "currency":"Dolar"
+        "price":"1003",
+        "currency":"DOLAR"
         },
         {
         "item":"oyster123",
@@ -28,6 +52,7 @@ content-type: application/json
 ###
 POST http://localhost:8080/addInventory
 content-type: application/json
+Authorization: TW9uZXk0TWVOb3Q0dQ==
 
 {
       "item":"test tt_001",
@@ -48,6 +73,8 @@ content-type: application/json
          }
       }
    }
+
+
 
 
 

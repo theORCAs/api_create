@@ -18,6 +18,8 @@ const { getCustomers } = require('./routes/getCustomers');
 const { autoReorderTransactions } = require('./routes/autoReorderTransactions');
 const { addInventory } = require('./routes/addInventory');
 const { updateCurrencyAndPrices } = require('./routes/updateCurrencyAndPrices');
+const { getMyDistanceWithCustomer } = require('./routes/getMyDistanceWithCustomer');
+
 
 //global op.
 app.use('/', indexRouter);
@@ -25,6 +27,7 @@ app.use("/getCustomers", getCustomers);
 app.use("/autoReorderTransactions", autoReorderTransactions);
 app.use("/addInventory", addInventory);
 app.use("/updateCurrencyAndPrices", updateCurrencyAndPrices);
+app.use("/getMyDistanceWithCustomer", getMyDistanceWithCustomer);
 
 var server = app.listen(8080, function () {
     var host = server.address().address
