@@ -1,4 +1,11 @@
+//0-Reset DataBase to start testing from the beginning 
+POST http://localhost:8080/resetDataBase
+content-type: application/json
+Authorization: TW9uZXk0TWVOb3Q0dQ==
+//Money4MeNot4u to base64 ==>TW9uZXk0TWVOb3Q0dQ== we convert our code to make more safety integration
+
 //1 
+###
 GET http://localhost:8080/getCustomers
 content-type: application/json
 Authorization: TW9uZXk0TWVOb3Q0dQ==
@@ -49,31 +56,83 @@ Authorization: TW9uZXk0TWVOb3Q0dQ==
 }
 
 //5
+# For this year, we are adding a new item to our menu, it’s hand_sanitizer. 
+# It’ll be supplied by the same exact supplier as toilet_paper. 
+# We’ll order 500, with a 10.00 price tag. Color will be green, hex: #302.
 ###
 POST http://localhost:8080/addInventory
 content-type: application/json
 Authorization: TW9uZXk0TWVOb3Q0dQ==
 
 {
-      "item":"test tt_001",
-      "details":{
-         "price":"5453.37",
-         "amount":57,
-         "last_purchased":"08/22/2016",
-         "color":"Maroon",
-         "color_hex":"#12c"
-      },
-      "supplier_details":{
-         "country":"Grenada",
-         "country_code":"GD",
-         "currency":"Dollar",
-         "contact":{
-            "phone":"864-800-0466",
-            "email":"mbrunton0@chronoengine.com"
-         }
-      }
+      "item":"hand_sanitizer",
+        "details": {
+            "price": "10.00",
+            "amount": 500,
+            "last_purchased": "09/27/2020",
+            "color": "green",
+            "color_hex": "#302"
+        },
+        "supplier_details": {
+            "country": "Indonesia",
+            "country_code": "ID",
+            "currency": "Rupiah",
+            "contact": {
+                "phone": "771-667-3249",
+                "email": "cchiversf@kickstarter.com"
+            }
+        }
    }
 
+# Jimbo has had major trust issued ever since his mum lied to him, 
+# claiming that his goldfish turned invisble even though she accidently killed it. 
+# Therefore, he asks you to run a few tests to prove that your app works, 
+# he will then check the databases to see if stuff changed acordingly.
+# Customer with id = 4 (probably a Colombian chef) has gone and made a purchase of 12 dolphins and 4 truffles
+# Customer with id = 1 (probably Dan Bilzerian’s long-lost cousin) has bought 1 helicopter, 5 AK47s, 3 cocaines
+###
+POST http://localhost:8080/postCustomerOrders
+content-type: application/json
+Authorization: TW9uZXk0TWVOb3Q0dQ==
+
+[
+    {
+      "customerId":4,
+      "orderDetails":[{
+         "inventory":"dolphin",
+         "quantity":5
+      },
+      {
+         "inventory":"truffles",
+         "quantity":4
+      }
+      ]
+   }
+]
+
+###
+POST http://localhost:8080/postCustomerOrders
+content-type: application/json
+Authorization: TW9uZXk0TWVOb3Q0dQ==
+
+[
+       {
+      "customerId":1,
+      "orderDetails":[{
+         "inventory":"helicopter",
+         "quantity":1
+      },
+      {
+         "inventory":"AK47",
+         "quantity":5
+      },
+      {
+         "inventory":"cocaine",
+         "quantity":3
+      }
+      ]
+   }
+]
 
 
 

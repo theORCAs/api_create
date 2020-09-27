@@ -14,7 +14,6 @@ module.exports = {
                 err && console.log(err);
                 console.log('Writing inventories is completed!');
             });
-
             res.send(req.body)
         } else {
             res.send('we have a problem. Token is incorrect! Connect the administrator. Please');
