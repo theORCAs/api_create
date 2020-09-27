@@ -72,5 +72,8 @@ describe('Post Endpoints', () => {
             .set('Authorization', 'TW9uZXk0TWVOb3Q0dQ==')
             .expect(200);
     });
-
+    afterAll(done => {
+        server.close();
+        done();
+    });
 });

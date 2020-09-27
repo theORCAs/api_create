@@ -18,7 +18,7 @@ module.exports = {
             // for more points and addresses we can use mongodb geo tools. It is easy and very fast 
             const distanceToCustomer = geolib.getPreciseDistance(customerCoord, req.body.myLocation)
 
-            res.status(200).send({ result: distanceToCustomer.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " km" });
+            res.send({ result: distanceToCustomer.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " km" });
         } else {
             res.send('we have a problem. Token is incorrect! Connect the administrator. Please');
         }
